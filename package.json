@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack serve --config ./config/webpack.dev.js --env filename=douyu.dev.user.js",
     "dev": "webpack --watch --config ./config/webpack.dev.js --env filename=douyu.dev.user.js",
+    "development": "concurrently 'yarn run dev' 'yarn run start' --kill-others --success first",
     "build": "yarn run lint:fix && webpack --config ./config/webpack.prod.js --env filename=douyu.user.js",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "lint:fix": "yarn run lint --fix"
@@ -32,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
     "babel-loader": "^8.2.4",
+    "concurrently": "^8.2.2",
     "css-loader": "^6.7.3",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
