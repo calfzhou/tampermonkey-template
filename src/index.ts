@@ -4,7 +4,7 @@ if (PRODUCTION) {
   app()
 } else {
   // 在生产环境打包时 webpack 会把 else 部分代码移除。使用动态导入就不会把这些代码打包进生产环境
-  import('@/devTools').then(({ isTampermonkey, hotReload, autoInstall }) => {
+  import('@/utils/devTools').then(({ isTampermonkey, hotReload, autoInstall }) => {
     if (isTampermonkey()) {
       // 载入在线调试热刷新
       hotReload()
