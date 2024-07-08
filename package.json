@@ -6,8 +6,9 @@
   "scripts": {
     "start": "webpack serve --config ./config/webpack.dev.js --env filename=douyu.dev.user.js",
     "dev": "webpack --watch --config ./config/webpack.dev.js --env filename=douyu.dev.user.js",
-    "development": "concurrently 'yarn run dev' 'yarn run start' --kill-others --success first",
-    "build": "yarn run lint:fix && webpack --config ./config/webpack.prod.js --env filename=douyu.user.js",
+    "style": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "development": "concurrently 'yarn run style' 'yarn run dev' 'yarn run start' --kill-others --success first",
+    "build": "yarn run lint:fix && npx tailwindcss -i ./src/input.css -o ./src/output.css && webpack --config ./config/webpack.prod.js --env filename=douyu.user.js",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "lint:fix": "yarn run lint --fix"
   },
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
+    "@tailwindcss/forms": "^0.5.7",
     "@types/tampermonkey": "^4.0.5",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
@@ -44,6 +46,7 @@
     "less-loader": "^10.2.0",
     "prettier": "^2.6.2",
     "style-loader": "^3.3.1",
+    "tailwindcss": "^3.4.4",
     "ts-loader": "^9.2.8",
     "typescript": "^4.6.3",
     "webpack": "^5.72.0",
