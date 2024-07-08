@@ -1292,10 +1292,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/tampermonkey@^4.0.5":
-  version "4.20.4"
-  resolved "https://registry.npmmirror.com/@types/tampermonkey/-/tampermonkey-4.20.4.tgz#321932e2966992a51b17103541a0708c3b547b7a"
-  integrity sha512-8w9QsNyZ2RDzmNA8UPbGvEx2Czwjg6/dEQ7Oqi5SqdNlmjJvBz+eg8bY6nt33BOsLKJERD6Kk3RGBVr5ZhcEWA==
+"@types/tampermonkey@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.npmmirror.com/@types/tampermonkey/-/tampermonkey-5.0.3.tgz#7451d5188f39bb58f8eff1e5a746ef6530fe7f56"
+  integrity sha512-i8+x8ipoib8xAfho25oNTbILgrO665oxq5tNr3LvH5DaW5UOPsc88Fe1mTVTDwsux5LYOcd8Syb6q+s95x878Q==
 
 "@types/ws@^8.5.5":
   version "8.5.10"
