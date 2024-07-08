@@ -1,8 +1,8 @@
-const webpack = require('webpack');
-const { baseOptions, getBanner } = require('./webpack.config.base');
+const webpack = require('webpack')
+const { baseOptions, getBanner } = require('./webpack.config.base')
 
-module.exports = (env) => {
-  baseOptions.output.filename = env.filename;
+module.exports = env => {
+  baseOptions.output.filename = env.filename
   baseOptions.plugins.push(
     new webpack.BannerPlugin({
       banner: getBanner({}),
@@ -12,9 +12,9 @@ module.exports = (env) => {
     new webpack.DefinePlugin({
       PRODUCTION: true,
     })
-  );
-  baseOptions.mode = 'production';
-  baseOptions.externals = {};
+  )
+  baseOptions.mode = 'production'
+  baseOptions.externals = {}
 
-  return baseOptions;
-};
+  return baseOptions
+}

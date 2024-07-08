@@ -31,6 +31,7 @@ module.exports = {
         requireStringLiterals: false,
       },
     ],
+    'arrow-parens': 'off',
     '@typescript-eslint/no-var-requires': 'off',
   },
-};
+}

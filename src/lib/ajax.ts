@@ -1,6 +1,6 @@
-import { XhrMethod, XhrOptions, XhrResponseType } from '@/global';
-import { MessageBox } from '@/lib/message';
-import { IMPORTANCE } from './message';
+import { XhrMethod, XhrOptions, XhrResponseType } from '@/global'
+import { MessageBox } from '@/lib/message'
+import { IMPORTANCE } from './message'
 
 export const getData = (
   url: string,
@@ -15,22 +15,22 @@ export const getData = (
       timeout: 5 * 60 * 1000,
       onload: function (response) {
         if (response.status >= 200 && response.status < 400) {
-          resolve(response.response);
+          resolve(response.response)
         } else {
-          reject(response);
+          reject(response)
         }
       },
       onerror: function (error) {
-        new MessageBox('网络错误');
-        reject(error);
+        new MessageBox('网络错误')
+        reject(error)
       },
       ontimeout: () => {
-        new MessageBox('网络超时', 'none', IMPORTANCE.LOG_POP_GM);
-        reject('timeout');
+        new MessageBox('网络超时', 'none', IMPORTANCE.LOG_POP_GM)
+        reject('timeout')
       },
-    });
-  });
-};
+    })
+  })
+}
 
 export const postData = (
   url: string,
@@ -57,20 +57,20 @@ export const postData = (
       timeout: 1 * 60 * 1000,
       onload: function (response) {
         if (response.status >= 200 && response.status < 400) {
-          resolve(response);
+          resolve(response)
         } else {
-          new MessageBox('请求错误：' + response.status);
-          reject(response.status);
+          new MessageBox('请求错误：' + response.status)
+          reject(response.status)
         }
       },
       onerror: function (error) {
-        new MessageBox('网络错误');
-        reject(error);
+        new MessageBox('网络错误')
+        reject(error)
       },
       ontimeout: () => {
-        new MessageBox('网络超时', 'none', IMPORTANCE.LOG_POP_GM);
-        reject('timeout');
+        new MessageBox('网络超时', 'none', IMPORTANCE.LOG_POP_GM)
+        reject('timeout')
       },
-    });
-  });
-};
+    })
+  })
+}
