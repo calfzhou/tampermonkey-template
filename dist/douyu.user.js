@@ -10,9 +10,10 @@
 // @run-at              document-idle
 // @supportURL          https://github.com/Eished/douyu-helper/issues
 // @homepage            https://github.com/Eished/douyu-helper
-// @grant               GM_getValue
-// @grant               GM_setValue
+// @grant               GM_addStyle
 // @grant               GM_registerMenuCommand
+// @grant               GM_setValue
+// @grant               GM_getValue
 // @icon                https://www.google.com/s2/favicons?domain=douyu.com
 // ==/UserScript==
 /* eslint-disable */ /* spell-checker: disable */
@@ -25,6 +26,7 @@
 /***/ ((__unused_webpack_module, exports) => {
 
 
+// import { renderDemo } from './demo'
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 var app = function () {
     var rid = new URLSearchParams(window.location.search).get('rid');
@@ -41,6 +43,9 @@ var app = function () {
     if (rid && videoSub) {
         autoSelectClarity(rid, videoSub);
     }
+    // Uncomment the following line to render the demo view, with React and Tailwind CSS.
+    // Also, make sure to import the renderDemo function from './demo'.
+    // renderDemo()
 };
 var autoSelectClarity = function (rid, videoSub) {
     var Clarities = ['全局默认最高画质', '全局默认最低画质'];

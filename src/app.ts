@@ -1,3 +1,5 @@
+// import { renderDemo } from './demo'
+
 const app = () => {
   let rid = new URLSearchParams(window.location.search).get('rid')
   if (!rid) {
@@ -13,6 +15,10 @@ const app = () => {
   if (rid && videoSub) {
     autoSelectClarity(rid, videoSub)
   }
+
+  // Uncomment the following line to render the demo view, with React and Tailwind CSS.
+  // Also, make sure to import the renderDemo function from './demo'.
+  // renderDemo()
 }
 
 const autoSelectClarity = (rid: string, videoSub: Element) => {
