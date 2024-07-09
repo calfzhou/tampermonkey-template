@@ -25,4 +25,6 @@ yarn run build
 
 默认会把 dist 目录的内容部署到 GitHub Pages。
 
+> 注意：首次创建项目仓库后，需要进入 代码仓库首页 -> Settings -> Pages，在 Build and deployment -> Source 中选 GitHub Actions。
+
 假设项目的代码仓库是 `calfzhou/expert-funicular`，那么获取构建结果的地址为：<https://calfzhou.github.io/expert-funicular/douyu.user.js>
