@@ -6,8 +6,8 @@
 export const isTampermonkey = () => {
   let tampermonkey = true
   try {
-    GM_info
-  } catch (err) {
+    void GM_info
+  } catch {
     tampermonkey = false
   }
   return tampermonkey

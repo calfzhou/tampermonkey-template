@@ -49,7 +49,9 @@ var autoSelectClarity = function (rid, videoSub) {
     var clickClarity = function (li, save) {
         if (save === void 0) { save = false; }
         if (!li.className.includes('selected')) {
-            save ? GM_setValue(rid, li.innerText) : null;
+            if (save) {
+                GM_setValue(rid, li.innerText);
+            }
             li.click();
         }
     };
@@ -101,7 +103,12 @@ var autoSelectClarity = function (rid, videoSub) {
             observer.disconnect();
             var ul = controller.nextElementSibling;
             var list = ul === null || ul === void 0 ? void 0 : ul.querySelectorAll('li');
-            list ? selectClarity(list) : console.debug('斗鱼直播助手：未找到画质选项');
+            if (list) {
+                selectClarity(list);
+            }
+            else {
+                console.debug('斗鱼直播助手：未找到画质选项');
+            }
         }
     };
     var observer = new MutationObserver(callback);

@@ -1,4 +1,4 @@
-const tailwindStyles = require('@/output.css')
+const tailwindStyles = require('@/output.css') // eslint-disable-line @typescript-eslint/no-require-imports
 
 // 导出的是 GM_addStyle 的值
 // 需要在 `config/common.meta.json` 和 `config/dev.meta.json` 中确保 `grant` 中加入了 `GM_addStyle`。
