@@ -27,8 +27,21 @@ jobs:
           yarn install
           yarn run build
 
-      - name: Auto build user.js to main branch
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: main
-          folder: .
+          path: ./dist
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -18,3 +18,11 @@ yarn run development
 ```bash
 yarn run build
 ```
+
+## GitHub Deployment
+
+[./.github/workflows/webpack.yml](./.github/workflows/webpack.yml) 中预设了 GitHub 上自动构建和部署的流程。
+
+默认会把 dist 目录的内容部署到 GitHub Pages。
+
+假设项目的代码仓库是 `calfzhou/expert-funicular`，那么获取构建结果的地址为：<https://calfzhou.github.io/expert-funicular/douyu.user.js>
