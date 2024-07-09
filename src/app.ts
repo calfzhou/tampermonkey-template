@@ -22,7 +22,9 @@ const autoSelectClarity = (rid: string, videoSub: Element) => {
 
   const clickClarity = (li: HTMLLIElement, save = false) => {
     if (!li.className.includes('selected')) {
-      save ? GM_setValue(rid, li.innerText) : null
+      if (save) {
+        GM_setValue(rid, li.innerText)
+      }
       li.click()
     }
   }
@@ -75,7 +77,11 @@ const autoSelectClarity = (rid: string, videoSub: Element) => {
       observer.disconnect()
       const ul = controller.nextElementSibling
       const list = ul?.querySelectorAll('li')
-      list ? selectClarity(list) : console.debug('斗鱼直播助手：未找到画质选项')
+      if (list) {
+        selectClarity(list)
+      } else {
+        console.debug('斗鱼直播助手：未找到画质选项')
+      }
     }
   }
 

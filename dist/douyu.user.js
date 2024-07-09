@@ -21,7 +21,7 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 752:
+/***/ 859:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -49,7 +49,9 @@ var autoSelectClarity = function (rid, videoSub) {
     var clickClarity = function (li, save) {
         if (save === void 0) { save = false; }
         if (!li.className.includes('selected')) {
-            save ? GM_setValue(rid, li.innerText) : null;
+            if (save) {
+                GM_setValue(rid, li.innerText);
+            }
             li.click();
         }
     };
@@ -101,7 +103,12 @@ var autoSelectClarity = function (rid, videoSub) {
             observer.disconnect();
             var ul = controller.nextElementSibling;
             var list = ul === null || ul === void 0 ? void 0 : ul.querySelectorAll('li');
-            list ? selectClarity(list) : console.debug('斗鱼直播助手：未找到画质选项');
+            if (list) {
+                selectClarity(list);
+            }
+            else {
+                console.debug('斗鱼直播助手：未找到画质选项');
+            }
         }
     };
     var observer = new MutationObserver(callback);
@@ -115,7 +122,7 @@ exports["default"] = app;
 
 /***/ }),
 
-/***/ 607:
+/***/ 156:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -146,7 +153,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var app_1 = __importDefault(__webpack_require__(752));
+var app_1 = __importDefault(__webpack_require__(859));
 if (true) {
     (0, app_1.default)();
 }
@@ -186,7 +193,7 @@ else {}
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__(607);
+/******/ 	var __webpack_exports__ = __webpack_require__(156);
 /******/ 	
 /******/ })()
 ;
