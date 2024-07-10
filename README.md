@@ -1,8 +1,12 @@
 # 油猴脚本开发模板
 
 > 以斗鱼直播自动切换清晰度作为示例。
-> forked from <https://github.com/Eished/tampermonkey-template>
-> 配置了 React、Tailwind CSS 等。
+
+Forked from <https://github.com/Eished/tampermonkey-template>.
+
+> 增加配置了 React、Tailwind CSS 等。
+>
+> 完整的原始 README 参见 [readme_upstream.md](./readme_upstream.md)
 
 使用此模板 [创建油猴脚本项目](https://github.com/calfzhou/tampermonkey-template/generate)。
 
