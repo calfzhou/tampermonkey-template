@@ -8,4 +8,5 @@ module.exports = {
   bracketSpacing: true, // 对象大括号直接是否有空格，默认为true，效果：{ foo: bar }
   arrowParens: 'avoid', // 箭头函数单个参数加分号
   bracketSameLine: true,
+  plugins: ['prettier-plugin-tailwindcss'],
 }
