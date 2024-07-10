@@ -1,6 +1,10 @@
 // import { renderDemo } from './demo'
 
 const app = () => {
+  // Uncomment the following line to render the demo view, with React and Tailwind CSS.
+  // Also, make sure to import the renderDemo function from './demo'.
+  // renderDemo()
+
   let rid = new URLSearchParams(window.location.search).get('rid')
   if (!rid) {
     const results = window.location.pathname.match(/[\d]{1,10}/)
@@ -15,10 +19,6 @@ const app = () => {
   if (rid && videoSub) {
     autoSelectClarity(rid, videoSub)
   }
-
-  // Uncomment the following line to render the demo view, with React and Tailwind CSS.
-  // Also, make sure to import the renderDemo function from './demo'.
-  // renderDemo()
 }
 
 const autoSelectClarity = (rid: string, videoSub: Element) => {
