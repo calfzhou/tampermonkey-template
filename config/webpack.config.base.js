@@ -14,6 +14,7 @@ const getBanner = meta => `// ==UserScript==\n${Object.entries(Object.assign(com
   .join('\n')}
 // ==/UserScript==
 /* eslint-disable */ /* spell-checker: disable */
+; // This semicolon is necessary when @require some scripts, e.g. ali-oss v6.18.1+.
 // @[ You can find all source codes in GitHub repo ]`
 
 const relativePath = p => path.join(process.cwd(), p)
