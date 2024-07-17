@@ -24,6 +24,18 @@ declare global {
   const PRODUCTION: boolean
   const FILENAME: string
 
+  // Example usage:
+  // ```ts
+  // (GM as GM_ex).cookie.list({ url: 'https://example.com' }).then(console.log)
+  // ```
+  type GM_ex = typeof GM & {
+    cookie: {
+      list(details?: Tampermonkey.ListCookiesDetails): Promise<Tampermonkey.Cookie[]>
+      set(details: Tampermonkey.SetCookiesDetails): Promise<void>
+      delete(details: AtLeastOneOf<Tampermonkey.DeleteCookiesDetails>): Promise<void>
+    }
+  }
+
   interface MonkeyXhrResponse {
     finalUrl: string
     readyState: number
