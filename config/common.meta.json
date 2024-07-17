@@ -7,6 +7,10 @@
   "copyright": "Eished",
   "license": "MIT",
   "match": ["*://*.douyu.com/*"],
+  "require": [
+    "https://unpkg.com/react@18.3.1/umd/react.production.min.js",
+    "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"
+  ],
   "run-at": "document-idle",
   "supportURL": "https://github.com/Eished/douyu-helper/issues",
   "homepage": "https://github.com/Eished/douyu-helper",

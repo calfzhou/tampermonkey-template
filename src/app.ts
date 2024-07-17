@@ -1,9 +1,8 @@
-// import { renderDemo } from './demo'
+import { renderDemo } from './demo'
 
 const app = () => {
-  // Uncomment the following line to render the demo view, with React and Tailwind CSS.
-  // Also, make sure to import the renderDemo function from './demo'.
-  // renderDemo()
+  // Render a demo view use React and Tailwind CSS.
+  renderDemo()
 
   let rid = new URLSearchParams(window.location.search).get('rid')
   if (!rid) {

@@ -14,7 +14,12 @@ module.exports = env => {
     })
   )
   baseOptions.mode = 'production'
-  baseOptions.externals = {}
+  baseOptions.externals = {
+    // Exclude some dependencies from the bundle to reduce the size of the final package.
+    // The dependencies should be provided by `require` in `config/common.meta.json`.
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  }
 
   return baseOptions
 }
