@@ -19,6 +19,7 @@
 // @icon                https://www.google.com/s2/favicons?domain=douyu.com
 // ==/UserScript==
 /* eslint-disable */ /* spell-checker: disable */
+; // This semicolon is necessary when @require some scripts, e.g. ali-oss v6.18.1+.
 // @[ You can find all source codes in GitHub repo ]
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
