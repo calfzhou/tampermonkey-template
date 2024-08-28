@@ -17,6 +17,12 @@ yarn install
 yarn run development
 ```
 
+## Testing
+
+```bash
+yarn run jest
+```
+
 ## Build
 
 ```bash
