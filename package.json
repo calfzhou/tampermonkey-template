@@ -29,7 +29,7 @@
   "homepage": "https://github.com/Eished/tampermonkey-template",
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-env": "^7.25.8",
     "@tailwindcss/forms": "^0.5.9",
     "@types/jest": "^29.5.13",
     "@types/react": "^18.3.6",
