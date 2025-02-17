@@ -55,7 +55,7 @@
     "tailwindcss": "^3.4.16",
     "to-string-loader": "^1.2.0",
     "ts-jest": "^29.2.5",
-    "ts-loader": "^9.2.8",
+    "ts-loader": "^9.5.2",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.2",
     "webpack": "^5.97.1",
